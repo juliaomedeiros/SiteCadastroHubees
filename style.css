@@ -1,0 +1,138 @@
+html {
+    height: 100%;
+}
+body{
+    padding: 0;
+    margin: 0;
+   
+}
+
+
+
+
+
+/*RELACIONADO AO NAVBAR*/
+
+
+.navbar{
+    background-color: #163B71;
+    font-family: 'Bree Serif', serif;
+}
+
+
+
+.navbar-brand{
+    color: #fbbd1f;
+}
+
+
+
+
+/* FIM DO RELACIONADO AO NAVBAR*/
+
+.flex_img{
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+
+#logo{
+    width: 50px;
+    color: #fbbd1f;
+    float: none !important;
+    padding: 23px 10px;
+    font-family: 'Bree Serif', serif;
+}
+
+.novousuario {
+    font-family: 'bree serif';
+    font-color: #163B71;
+    color: #fbbd1f;
+}
+
+.botao{
+    font-family: 'bree serif';
+    background-color: #fbbd1f;
+    width: 95px;
+    height: 45px;
+}
+
+.botao2{
+    font-family: 'bree serif';
+    color: #fbbd1f;
+    width: 65px;
+    height: 45px;
+    text-decoration: none;
+    position: relative;
+    top: 30px; left: 160px;
+   
+}
+
+.formulario {
+    margin: auto;
+    width: 500px;
+    padding: 2em;
+    border: 1px solid #CCC;
+    background-color: #163B71;
+    border-radius: 1em;
+    position: relative;
+    text-align: center;
+}
+
+h1{
+	font-weight: 400;
+	font-size: 4em;
+}
+
+.form-control {
+    width: 100%;
+}
+
+input[type=password] {
+    width: 100%;
+}
+
+.form-group{
+    color: #fbbd1f;
+    font-family: 'bree serif';
+    font-size: large;
+}
+
+.rodape {
+    font-family: 'bree serif';
+    background-color: #163B71;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.rodape p {
+color: #fbbd1f;
+margin-bottom: 0;
+margin: 5px;
+font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

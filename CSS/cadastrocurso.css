@@ -1,0 +1,94 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #F2F0EB;
+}
+
+nav {
+    display: flex;
+    background-color: #1f3f6e ;
+
+}
+
+.novocurso {
+    font-family: 'bree serif';
+    font-color: #163B71;
+    color: #fbbd1f;
+}
+
+.botao{
+    background-color: #fbbd1f;
+}
+
+.formulario {
+	margin: auto;
+    width: 400px;
+    padding: 3em;
+    border: 1px solid #CCC;
+    background-color: #163B71/* #f1f1f1*/;
+    border-radius: 1em;
+    position: relative;
+    top: 15vh;
+    text-align: center;
+}
+
+h1{
+	font-weight: 400;
+	font-size: 4em;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+input[type=password] {
+    width: 52%;
+}
+
+label {
+    width: 40%;
+}
+
+.botao{
+    font-family: 'bree serif';
+    background-color: #fbbd1f;
+    width: 75px;
+    height: 45px;
+}
+
+.rodape {
+    font-family: 'breef serif';
+    background-color: #163B71;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: left;
+}
+
+.rodape p {
+color: #fbbd1f;
+margin-bottom: 0;
+margin: 5px;
+font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

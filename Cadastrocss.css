@@ -1,0 +1,131 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #F2F0EB;
+}
+
+/*RELACIONADO AO NAVBAR*/
+
+
+.navbar{
+    background-color: #163B71;
+    font-family: 'Bree Serif', serif;
+}
+
+
+
+.navbar-brand{
+    color: #fbbd1f;
+}
+
+
+
+
+/* FIM DO RELACIONADO AO NAVBAR*/
+
+.novousuario {
+    font-family: 'bree serif';
+    font-color: #163B71;
+    color: #fbbd1f;
+}
+
+.titulousuario{
+    font-family: 'bree serif';
+    font-color: #163B71;
+    color: #fbbd1f;
+    text-align: center;
+}
+.botao{
+    background-color: #fbbd1f;
+}
+
+.formulario {
+	margin: auto;
+    width: 600px;
+    padding: 1em;
+    border: 1px solid #CCC;
+    background-color: #163B71/* #f1f1f1*/;
+    border-radius: 1em;
+    position: relative;
+    top: 3vh;
+    text-align: center;
+}
+
+.termos p {
+   text-align: center;
+   display: inline;
+ 
+}
+
+#concordo{
+    align-items: left;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+input[type=password] {
+    width: 100%;
+}
+
+input[type=email] {
+    width: 100%;
+}
+
+textarea[type=text] {
+    width: 100%;
+}
+
+select{
+    width: 100%;
+}
+
+
+label {
+    width: 40%;
+}
+.botao{
+    font-family: 'bree serif';
+    background-color: #fbbd1f;
+    width: 90px;
+    height: 45px;
+    margin-top: 30px;
+}
+
+.rodape {
+    font-family: 'breef serif';
+    background-color: #163B71;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+    .rodape p {
+    color: #fbbd1f;
+    margin-bottom: 0;
+    margin: 5px;
+    font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

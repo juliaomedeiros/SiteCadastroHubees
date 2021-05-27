@@ -1,0 +1,127 @@
+
+<?php
+
+use Alura\Pdo\Infrastructure\Persistence\ConnectionCreator;
+$erro = "";
+if (isset($_POST['email'])) {
+
+
+
+    try {
+
+
+
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $rgm = $_POST['rgm'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+
+
+
+        require_once 'vendor/autoload.php';
+        $connection = ConnectionCreator::createConnection();
+        $sqlInsert = "INSERT INTO usuario (nome,cpf,rgm,email,senha) VALUES (:nome, :cpf,:rgm,:email,:senha);";
+        $statement=$connection->prepare($sqlInsert); // preparo o banco de dados para receber os parametros , assim evitando o SQLInjection
+        $statement->bindValue(':nome',$nome); // ele trasnforma em string evitando algum SQLInjection
+        $statement->bindValue(':cpf',$cpf);
+        $statement->bindValue(':rgm',$rgm);
+        $statement->bindValue(':email',$email);
+        $statement->bindValue(':senha',$senha);
+        if ($statement->execute() == true){
+            header('Location:login.php');
+        }
+
+
+
+    }
+
+
+    catch (PDOException $exception){
+
+
+
+        $erro = "CPF já cadastrado, Porfavor digite outro email!";
+
+    }
+
+
+
+
+
+}
+
+
+?>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Cadastrocss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <title>Cadastro usuário - Hubees</title>
+</head>
+<body>
+<header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="navbar-brand" >Hubees</div>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+
+</header>
+<!-- FIM DO HEADER -->
+<?=$erro;?>
+<form class="formulario" action="cadastroUsuario.php" method="POST">
+
+     <h3><p class="titulousuario">Cadastro de Usuário<a class="nav-link" href="#"></a></p></h3>
+    <p class="novousuario"><label for="nome">Nome completo: </label>
+        <input name="nome" id="nome" type="text" placeholder="Nome" required> <br/></p>
+
+    <p class="novousuario"><label for="cnpj">CPF: </label>
+        <input name="cpf" id="cpf" type="text" placeholder="XXX.XXX.XXX-XX" required title="CNPJ deve conter 11 caracteres"> <br/></p>
+
+    <p class="novousuario"><label for="cnpj">RGM: </label>
+        <input name="rgm" id="rgm" type="text" placeholder="XXXXXXXX" required title="CNPJ deve conter 11 caracteres"> <br/></p>
+
+    <p class="novousuario"><label>Email: </label>
+        <input name="email" type="email" id="email" placeholder="Seu email" required> <br/></p>
+
+    <p class="novousuario"><label>Senha: </label>
+        <input name="senha" type="password" id="senha" placeholder="Sua senha" pattern=".{5,10}" required title="senha deve conter entre 5 a 10 caracteres"> <br/></p>
+
+    <p class="novousuario"><label>Confirmar senha: </label>
+        <input name="password"  type="password" placeholder="Sua senha" pattern=".{5,10}" required title="senha deve conter entre 5 a 10 caracteres"> <br/></p>
+
+
+    <div class="termos">
+        <input name="concordo" id="concordo" type="checkbox"></p>
+        <p class="novousuario"><label for="concordo">Eu concordo com os <a href="#">termos e condições</a> </label> 
+    </div>
+
+    <button type="Submit" class="botao" >Cadastrar</button>
+</form>
+
+
+
+ <!-- FIM DA SECTION -->
+ <footer class="rodape">
+        <p>Todos os direitos reservados</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>

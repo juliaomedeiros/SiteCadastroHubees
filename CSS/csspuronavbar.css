@@ -1,0 +1,173 @@
+html {
+    height: 100%;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: white;
+   
+}
+
+
+
+/*RELACIONADO AO NAVBAR*/
+
+
+
+.nav {
+    
+    background-color: #163B71 ;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+   
+   
+}
+
+.nav a {
+    float: left;
+    color: #fbbd1f;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  
+  
+  .nav a.menu {
+    font-family: 'Bree Serif', serif;
+    font-size: x-large;
+
+  }
+
+  .nav a.cadastre {
+    font-family: 'Bree Serif', serif;
+    font-size: x-large;
+    float: right;
+    
+  }
+
+
+
+  
+  .nav a.active {
+    background-color: #fbbd1f; /* se fosse para colocar algo em destaque*/
+    color: black;
+    font-family: 'Bree Serif', serif;
+    height: 60px;
+    float: right;
+  }
+
+
+
+/* FIM DO RELACIONADO AO NAVBAR*/
+
+.flex_img{
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+
+#logo{
+    width: 50px;
+    color: #fbbd1f;
+    float: none !important;
+    padding: 23px 10px;
+    font-family: 'Bree Serif', serif;
+}
+
+.novousuario {
+    font-family: 'bree serif';
+    font-color: #163B71;
+    color: #fbbd1f;
+}
+
+.botao{
+    font-family: 'bree serif';
+    background-color: #fbbd1f;
+    width: 95px;
+    height: 45px;
+}
+
+.botao2{
+    font-family: 'bree serif';
+    color: #fbbd1f;
+    width: 65px;
+    height: 45px;
+    text-decoration: none;
+    position: relative;
+    top: 40px; left: 160px;
+   
+}
+
+
+
+.formulario {
+	margin: auto;
+    width: 400px;
+    padding: 3em;
+    border: 1px solid #CCC;
+    background-color: #163B71/* #f1f1f1*/;
+    border-radius: 1em;
+    position: relative;
+ 
+    text-align: center;
+}
+
+h1{
+	font-weight: 400;
+	font-size: 4em;
+}
+
+input[type=text] {
+    width: 50%;
+}
+
+input[type=password] {
+    width: 52%;
+}
+
+label {
+    width: 40%;
+}
+
+.rodape {
+    font-family: 'bree serif';
+    background-color: #163B71;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.rodape p {
+color: #fbbd1f;
+margin-bottom: 0;
+margin: 5px;
+font-size: small;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
